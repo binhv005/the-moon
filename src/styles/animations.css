@@ -1,0 +1,21 @@
+/* Reveal khi cuộn – chỉ ẩn khi JS đã chạy (class .js trên <html>), nên nội dung luôn hiển thị nếu JS lỗi. */
+.js .reveal { opacity: 0; transition: opacity 0.8s var(--ease) var(--delay, 0ms), transform 0.8s var(--ease) var(--delay, 0ms); }
+.js .reveal--up { transform: translateY(20px); }
+.js .reveal--left { transform: translateX(-28px); }
+.js .reveal--right { transform: translateX(28px); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+
+/* Hero */
+.js .hero-anim { opacity: 0; transform: translateY(18px); animation: fade-up 0.9s var(--ease) forwards; animation-delay: var(--d, 0ms); }
+.js .hero__bg img { animation: hero-in 1.6s var(--ease) both; }
+@keyframes fade-up { to { opacity: 1; transform: none; } }
+@keyframes hero-in { from { opacity: 0; transform: scale(1.05); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+.lightbox, .modal { animation: fade-in 0.25s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0ms !important; transition-duration: 0.01ms !important; transition-delay: 0ms !important; }
+  .js .reveal, .js .hero-anim { opacity: 1; transform: none; }
+}

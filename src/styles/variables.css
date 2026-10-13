@@ -1,0 +1,20 @@
+:root {
+  --white: #ffffff;
+  --sky: #eaf6f8;
+  --aqua: #ddf1f0;
+  --sand: #f5efe5;
+  --text: #263746;
+  --text-soft: #55677a;
+  --teal: #176b75;
+  --teal-dark: #0f5760;
+  --border: #d8e4e6;
+  --danger: #a6392b;
+
+  --font-title: 'Dancing Script', 'Be Vietnam Pro', cursive;
+  --font: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --gutter: clamp(16px, 4.5vw, 56px);
+  --section-y: clamp(64px, 9vw, 120px);
+  --header-h: 78px;
+  --radius: 14px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
